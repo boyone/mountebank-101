@@ -1,0 +1,19 @@
+{
+  "protocol": "http",
+  "port": 3002,
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": { "body": "1" }
+        },
+        {
+          "is": { "body": "2" }
+        },
+        {
+          "is": { "body": "3" }
+        }
+      ]
+    }
+  ]
+}

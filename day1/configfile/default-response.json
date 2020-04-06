@@ -1,0 +1,21 @@
+{
+  "protocol": "http",
+  "port": 3001,
+  "name": "Default Response",
+  "defaultResponse": {
+    "statusCode": 400,
+    "headers": {
+      "Connection": "Keep-Alive",
+      "Content-Length": 0
+    }
+  },
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": { "body": "BOOM!!!" }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "55a07781-3f61-41d1-84b1-6da2d48646ba",
+		"name": "day1-mountebank-101",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create-hello-world",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"protocol\": \"http\",\n  \"port\": 3000,\n  \"stubs\": [\n    {\n      \"responses\": [\n        {\n          \"is\": {\n            \"statusCode\": 200,\n            \"headers\": { \"Content-Type\": \"text/plain\" },\n            \"body\": \"Hello, World!\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2525/imposters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2525",
+					"path": [
+						"imposters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "call-hello-world",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete-hello-world",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"protocol\": \"http\",\n  \"port\": 3000,\n  \"stubs\": [\n    {\n      \"responses\": [\n        {\n          \"is\": {\n            \"statusCode\": 200,\n            \"headers\": { \"Content-Type\": \"text/plain\" },\n            \"body\": \"Hello, World!\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2525/imposters/3001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2525",
+					"path": [
+						"imposters",
+						"3001"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-default-response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"protocol\": \"http\",\n  \"port\": 3001,\n  \"name\": \"default response\",\n  \"defaultResponse\": {\n    \"statusCode\": 400,\n    \"headers\": {\n      \"Connection\": \"Keep-Alive\",\n      \"Content-Length\": 0\n    }\n  },\n  \"stubs\": [{\n      \"responses\": [{\n          \"is\": { \n          \t\"statusCode\": 200,\n          \t\"body\": \"BOOM!!!\"\n          }\n      }]\n  }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2525/imposters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2525",
+					"path": [
+						"imposters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-cycling-through-response",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"protocol\": \"http\",\n  \"port\": 3002,\n  \"stubs\": [\n    {\n      \"responses\": [\n        {\n          \"is\": { \"body\": \"1\" }\n        },\n        {\n          \"is\": { \"body\": \"2\" }\n        },\n        {\n          \"is\": { \"body\": \"3\" }\n        }\n      ]\n    }\t\t\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2525/imposters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2525",
+					"path": [
+						"imposters"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

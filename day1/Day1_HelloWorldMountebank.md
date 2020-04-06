@@ -19,9 +19,7 @@
 - Cost
 - Slow feedback loop
 
-## Setting up
-
-### 3A pattern: Arrange, Act, Assert, Cleanup
+## 3A pattern: Arrange, Act, Assert, Cleanup
 
 - Setup data test
 - Execute the system under test

@@ -13,7 +13,7 @@
 - Saving multiple Imposters in the config file
 - EJS
 
-## Day 2: Predicates
+## [Day 2: Predicates](day2/Day2_Predicates.md)
 
 - Using predicates to send different responses for different requests
 - Simplifying predicates on JSON request bodies

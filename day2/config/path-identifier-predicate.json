@@ -1,0 +1,24 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "matches": { "path": "/items/\\d+" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "name": "43 Piece Dinner Set",
+              "price": 12.95,
+              "quantity": 10
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

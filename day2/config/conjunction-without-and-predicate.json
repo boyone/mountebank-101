@@ -1,0 +1,23 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        { "startsWith": { "body": "smart" } },
+        { "endsWith": { "body": "robot" } }
+      ],
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "name": "43 Piece Dinner Set",
+              "price": 12.95,
+              "quantity": 10
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

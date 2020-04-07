@@ -1,0 +1,19 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        { "equals": { "method": "POST" } },
+        { "equals": { "path": "/shipping" } },
+        {
+          "xpath": {
+            "selector": "//item[@name='AlphaBot2']/location"
+          },
+          "equals": { "body": "Covid-19 Zone" }
+        }
+      ],
+      "responses": [{ "is": { "statusCode": 400 } }]
+    }
+  ]
+}

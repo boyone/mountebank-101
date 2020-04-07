@@ -1,0 +1,35 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "deepEquals": {
+            "query": { "q": ["smart", "robot"] }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "items": [
+                {
+                  "name": "TA Robot",
+                  "price": 109.99,
+                  "quantity": 50
+                },
+                {
+                  "name": "AlphaBot2",
+                  "price": 71.0,
+                  "quantity": 73
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        { "equals": { "method": "POST" } },
+        { "startsWith": { "body": "smart" } },
+        { "endsWith": { "body": "robot" } }
+      ],
+      "responses": [
+        {
+          "is": {
+            "body": "Hello, smart robot"
+          }
+        }
+      ]
+    }
+  ]
+}

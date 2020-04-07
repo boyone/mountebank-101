@@ -1,0 +1,25 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": {
+            "body": {
+              "name": "riderX"
+            }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": { "Location": "/items/123" }
+          }
+        }
+      ]
+    }
+  ]
+}

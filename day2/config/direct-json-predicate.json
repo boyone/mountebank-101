@@ -16,7 +16,11 @@
         {
           "is": {
             "statusCode": 201,
-            "headers": { "Location": "/items/123" }
+            "headers": { 
+              "Location": "/items/123",
+              "Content-Type": "application/json" 
+            },
+            "body": { "status": "success" }
           }
         }
       ]

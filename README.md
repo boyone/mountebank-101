@@ -19,25 +19,25 @@
 - Simplifying predicates on JSON request bodies
 - Using XPath to simplify predicates on XML request bodies
 
-## Day 3: Record/Replay
-
-- Setting up a proxy
-- Generating the Correct Predicates
-- Capturing multiple responses for the same request
-- Ways to Replay a Proxy
-
-## Day 4: Behavior and Programming mountebank
+## Day 3: Behavior and Programming mountebank
 
 - Creating Your Own Predicate
 - Creating your own Dynamic Response
 
-## Day 5: Adding Behaviors
+## Day 4: Adding Behaviors
 
 - Understand behaviors
 - Decorating a response
 - Adding latency to a Response
 - Repeating a Response Multiple Times
 - Replacing Content in The Response
+
+## Day 5: Record/Replay
+
+- Setting up a proxy
+- Generating the Correct Predicates
+- Capturing multiple responses for the same request
+- Ways to Replay a Proxy
 
 ## Tricks
 

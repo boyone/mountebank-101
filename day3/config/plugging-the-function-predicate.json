@@ -1,0 +1,26 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "inject": "function (request) {\n if (request.path.indexOf('/items/1') === 0) {\n return true;\n }\n else {\n return false;\n}\n}"
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "text/plain" },
+            "body": {
+              "name": "43 Piece Dinner Set",
+              "price": 12.95,
+              "quantity": 10
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

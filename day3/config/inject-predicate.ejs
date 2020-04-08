@@ -1,0 +1,28 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "inject": "<%- stringify(filename, 'inject-predicate.js') %>"
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": {
+              "Content-Type": "text/plain"
+            },
+            "body": {
+              "name": "43 Piece Dinner Set",
+              "price": 12.95,
+              "quantity": 10
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

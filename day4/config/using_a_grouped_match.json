@@ -1,0 +1,31 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "id": "$ID[1]",
+              "name": "43 Piece Dinner Set",
+              "price": 12.95
+            }
+          },
+          "_behaviors": {
+            "copy": [
+              {
+                "from": "path",
+                "into": "$ID",
+                "using": {
+                  "method": "regex",
+                  "selector": "items/(\\w+)"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

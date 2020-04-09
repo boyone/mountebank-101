@@ -1,0 +1,54 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "equals": { "path": "/items/1" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": "1", "name": "43 Piece Dinner Set", "price": 12.95 }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "path": "/items/2" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": "2", "name": "RiderX", "price": 2.95 }
+          }
+        }
+      ]
+    },
+    {
+      "predicates": [
+        {
+          "equals": { "path": "/items/3" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": "3", "name": "Alpha Bot", "price": 33.95 }
+          }
+        }
+      ]
+    }
+  ]
+}

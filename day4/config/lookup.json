@@ -1,0 +1,28 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [{
+      "responses": [{
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "id": "${row}['id']", "name": "${row}['name']", "price": "${row}[price]" }
+          },
+          "_behaviors": {
+            "lookup": [
+              {
+                "key": {
+                  "from": "path",
+                  "using": { "method": "regex", "selector": "items/(\\w+)" },
+                  "index": 1
+                },
+                "fromDataSource": {
+                  "csv": { "path": "toys.csv", "keyColumn": "id" }
+                },
+                "into": "${row}"
+              }
+            ]
+          }
+      }]
+  }]
+}

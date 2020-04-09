@@ -1,0 +1,45 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "predicates": [
+        {
+          "matches": { "path": "/items/1" }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "name": "43 Piece Dinner Set",
+              "price": 12.95
+            }
+          },
+          "_behaviors": {
+            "repeat": 3
+          }
+        },
+        {
+          "is": {
+            "body": {
+              "name": "RiderX",
+              "price": 2.95
+            }
+          }
+        },
+        {
+          "is": {
+            "body": {
+              "name": "Alpha Bot",
+              "price": 33.95
+            }
+          },
+          "_behaviors": {
+            "repeat": 5
+          }
+        }
+      ]
+    }
+  ]
+}

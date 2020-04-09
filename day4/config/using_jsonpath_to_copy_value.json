@@ -1,0 +1,30 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": {
+            "body": {
+              "id": "1",
+              "message": "$NAME[1]  is created"
+            }
+          },
+          "_behaviors": {
+            "copy": [
+              {
+                "from": "body",
+                "into": "$NAME",
+                "using": {
+                  "method": "jsonpath",
+                  "selector": "$..name"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

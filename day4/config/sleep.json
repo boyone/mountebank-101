@@ -1,0 +1,20 @@
+{
+  "protocol": "http",
+  "port": 3000,
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": {
+            "statusCode": 201,
+            "headers": { "Content-Type": "application/json" },
+            "body": { "name": "sleep" }
+          },
+          "_behaviors": {
+            "wait": 3000
+          }
+        }
+      ]
+    }
+  ]
+}

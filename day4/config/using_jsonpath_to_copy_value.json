@@ -6,9 +6,9 @@
       "responses": [
         {
           "is": {
+            "statusCode": 201,
             "body": {
-              "id": "1",
-              "message": "$NAME[1]  is created"
+              "message": "$NAME  is created"
             }
           },
           "_behaviors": {
@@ -21,7 +21,8 @@
                   "selector": "$..name"
                 }
               }
-            ]
+            ],
+            "decorate": "<%- stringify(filename, 'decorate.js') %>"
           }
         }
       ]

@@ -1,12 +1,18 @@
 {
   "protocol": "http",
   "port": 3000,
-  "stubs": [{
-      "responses": [{
+  "stubs": [
+    {
+      "responses": [
+        {
           "is": {
             "statusCode": 200,
             "headers": { "Content-Type": "application/json" },
-            "body": { "id": "${row}['id']", "name": "${row}['name']", "price": "${row}[price]" }
+            "body": {
+              "id": "${row}['id']",
+              "name": "${row}['name']",
+              "price": "${row}[price]"
+            }
           },
           "_behaviors": {
             "lookup": [
@@ -23,6 +29,8 @@
               }
             ]
           }
-      }]
-  }]
+        }
+      ]
+    }
+  ]
 }

@@ -11,7 +11,7 @@
             "body": {}
           },
           "_behaviors": {
-            "decorate": "function (request, response, logger) { const item = JSON.parse(request.body); response.body.message = item.name + ' is created'; }"
+            "decorate": "<%- stringify(filename, 'decorate.js') %>"
           }
         }
       ]

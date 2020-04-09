@@ -24,7 +24,7 @@
 - Creating Your Own Predicate
 - Creating your own Dynamic Response
 
-## Day 4: Adding Behaviors
+## [Day 4: Adding Behaviors](day4/Day4_AddingBehaviors.md)
 
 - Understand behaviors
 - Decorating a response

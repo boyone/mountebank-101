@@ -1,0 +1,30 @@
+{
+  "port": 3000,
+  "protocol": "http",
+  "stubs": [
+    {
+      "responses": [
+        {
+          "proxy": {
+            "to": "http://localhost:8888",
+            "predicateGenerators": [
+              {
+                "matches": {
+                  "path": true
+                }
+              },
+              {
+                "matches": {
+                  "body": true
+                },
+                "jsonpath": {
+                  "selector": "$.name"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

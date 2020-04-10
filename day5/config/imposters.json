@@ -1,0 +1,67 @@
+{
+  "imposters": [
+    {
+      "protocol": "http",
+      "port": 3000,
+      "recordRequests": false,
+      "stubs": [
+        {
+          "predicates": [
+            {
+              "deepEquals": {
+                "path": "/items/2"
+              }
+            },
+            {
+              "jsonpath": {
+                "selector": "$.name"
+              },
+              "deepEquals": {
+                "body": "boyone"
+              }
+            }
+          ],
+          "responses": [
+            {
+              "is": {
+                "statusCode": 200,
+                "headers": {
+                  "Content-Type": "application/json",
+                  "Connection": "close",
+                  "Date": "Thu, 09 Apr 2020 18:14:27 GMT",
+                  "Transfer-Encoding": "chunked"
+                },
+                "body": "{\n    \"id\": \"2\",\n    \"name\": \"RiderX\",\n    \"price\": \"2.95\"\n}",
+                "_mode": "text"
+              }
+            }
+          ]
+        },
+        {
+          "responses": [
+            {
+              "proxy": {
+                "to": "http://localhost:8888",
+                "predicateGenerators": [
+                  {
+                    "matches": {
+                      "path": true
+                    }
+                  },
+                  {
+                    "matches": {
+                      "body": true
+                    },
+                    "jsonpath": {
+                      "selector": "$.name"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

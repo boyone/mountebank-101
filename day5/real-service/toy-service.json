@@ -1,0 +1,52 @@
+{
+  "protocol": "http",
+  "port": 8888,
+  "defaultResponse": {
+    "statusCode": 400,
+    "headers": {
+      "Connection": "Keep-Alive",
+      "Content-Length": 0
+    }
+  },
+  "stubs": [
+    {
+      "predicates": [
+        { "matches": { "path": "/items/\\d+" }, "caseSensitive": true },
+        {
+          "equals": {
+            "method": "GET",
+            "headers": { "Content-Type": "application/json" }
+          }
+        }
+      ],
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "headers": { "Content-Type": "application/json" },
+            "body": {
+              "id": "${row}['id']",
+              "name": "${row}['name']",
+              "price": "${row}[price]"
+            }
+          },
+          "_behaviors": {
+            "lookup": [
+              {
+                "key": {
+                  "from": "path",
+                  "using": { "method": "regex", "selector": "items/(\\w+)" },
+                  "index": 1
+                },
+                "fromDataSource": {
+                  "csv": { "path": "toys.csv", "keyColumn": "id" }
+                },
+                "into": "${row}"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

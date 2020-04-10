@@ -1,0 +1,25 @@
+{
+  "port": 3000,
+  "protocol": "http",
+  "stubs": [
+    {
+      "responses": [
+        {
+          "is": {
+            "statusCode": 200,
+            "body": {
+              "greeting": "Hello, World!",
+              "timestamp": "nothing"
+            },
+            "headers": {
+              "Content-Type": "application/json"
+            }
+          },
+          "_behaviors": {
+            "decorate": "<%- stringify(filename, 'timeStamp.js') %>"
+          }
+        }
+      ]
+    }
+  ]
+}
